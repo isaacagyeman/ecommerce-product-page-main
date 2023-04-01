@@ -1,8 +1,12 @@
-
+@font-face {
+    font-family: 'KumbhSans';
+    src: url('/assets/fonts/KumbhSans-VariableFont_wght.ttf');
+}
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'KumbhSans';
 }
 
 nav li{
@@ -19,6 +23,7 @@ nav{
     align-items: center;
     justify-content: space-between;
 }
+
 
 nav a{
     text-decoration: none;
@@ -60,7 +65,7 @@ display: flex;
     width: 70%;
     max-width: 1440px;
     margin: 0 auto;
-    margin-top: 5.5rem;
+    margin-top: 3.5rem;
     justify-content: space-between;
 }
 .mySlides{
@@ -127,14 +132,20 @@ ul a:hover{
 }
 .rightSubHead{
     margin: 1rem;
-    width: 40%;
+    width: 100%;
 }
 .rightSubHead p{
     font-weight: 700;
+    font-size: 2.3em;
 }
 .rightSideBody{
     width: 80%;
     margin: 1rem;
+}
+.rightSideBody p{
+    color:  hsl(219, 9%, 45%) ;
+    font-weight: 400;
+    font-size: .9em;
 }
 .price-tag{
     display: flex;
@@ -421,6 +432,9 @@ justify-content: space-evenly;
 }
 .price-discount{
     display: flex;
+}
+#currentPrice{
+    background: hsl(26, 100%, 55%);
 }
 .addToCartSec{
     display: block;

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="/dist/index.css"/>
+  
+  <title>Frontend Mentor | E-commerce product page</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+</head>
+<body>
+<header class="nav-bar">
+    <!-- <img src = "/assets/images/icon-menu.svg" id="menu"/> -->
+  <!-- <img src="/assets/images/logo.svg" id="Logo"/> -->
+  <nav>
+    <img src = "/assets/images/icon-menu.svg" id="menu"/>
+    <img src="/assets/images/logo.svg" id="Logo"/>
+    <ul>
+      <li><a href="#">Collections</a></li>
+      <li><a href="#">Men</a></li>
+      <li><a href="#">Women</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+  <div class="sep-nav">
+    <!-- This is the cart icon near the avatar image-->
+    <div class="cartContainer">
+      <p id="totalIndicator">3</p>
+      <img src="/assets/images/icon-cart.svg" class="cart-1">
+
+    </div>
+    <!-- This is the cart menu -->
+    <!-- This is the avatar image -->
+    <img src="/assets/images/image-avatar.png" id="avatarImg"/>
+  </div>
+</header>  
+
+<div class="root-menu">
+  <div class="menu-content">
+    <img src="/assets/images/icon-close.svg" id="btnMenuClose"/>
+    <div class="menu-links">
+    <a href="#">Collections</a>
+    <a href="#">Men</a>
+    <a href="#">Women</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+    </div>
+  </div> 
+</div>
+
+<div class="cartMenu">
+  <p class="cartTitle">Cart</p>
+  <p class="menuInner">Your cart is empty</p>
+
+  <!-- This is the content in the cart -->
+  <div class="cartContentRoot">
+    <div class="cartContent">
+      <img src="/assets/images/image-product-1-thumbnail.jpg" id="cartContentImg"/>
+      <div class="infoPrice">
+        <p>Fall Limited Edition Sneakers</p>
+        <p>$125.00 x 3 <b>$375.00</b></p>
+      </div>
+    </div>
+    <img src="/assets/images/icon-delete.svg" id="btnDelete" width="12" height="15"/>
+  </div>
+  <a href="#" id="btnCheckout">Checkout</a>
+
+  
+</div>
+
+<main class="container">
+
+  <!-- This is the left side of the main page -->
+  <div class="left-side">
+
+
+      <img src="/assets/images/image-product-1.jpg" id="productImg1" class="mySlides"/>
+
+      <img src="/assets/images/image-product-2.jpg" id="productImg2" class="mySlides"/>
+      <img src="/assets/images/image-product-3.jpg" id="productImg3" class="mySlides"/>
+      <img src="/assets/images/image-product-4.jpg" id="productImg4" class="mySlides"/>
+
+      <div class="btnSlidersContainer">
+        <img src="/assets/images/icon-previous.svg"  id = "btnPrevious1" class="btnSliders" onclick="nextSlide(-1)" />
+        
+        <img src="/assets/images/icon-next.svg" id="btnPrevious2" class="btnSliders" onclick="nextSlide(1)"/>
+  
+      </div>
+    <!-- <div class="leftSideImg"></div> -->
+
+    <div class="thumbnails">
+      <img src="/assets/images/image-product-1-thumbnail.jpg" class="small-Imgs" id="thumb1" onclick="currentSlide(1)"/>
+      <img src="/assets/images/image-product-2-thumbnail.jpg" class="small-Imgs" id="thumb2" onclick="currentSlide(2)"/>
+      <img src="/assets/images/image-product-3-thumbnail.jpg" class="small-Imgs" id="thumb3" onclick="currentSlide(3)"/>
+      <img src="/assets/images/image-product-4-thumbnail.jpg" class="small-Imgs" id="thumb4" onclick="currentSlide(4)"/>
+    </div>
+  </div>
+
+  <div class="right-side">
+    <p id="rightSideHead">SNEAKER COMPANY</p>
+    <div class="rightSubHead">
+      <p class="subHeading">Fall Limited Edition Sneakers</p>
+    </div>
+    <div class="rightSideBody">
+      <p>These low profile sneakers are your perfect casual wear companion
+        Featuring a durable rubber sole , they'll withstand anything the weather can offer
+      </p>
+    </div>
+
+    <div class="price-tag">
+      <div class="price-discount">
+        <p>$125.00</p>
+        <s><p>$250.00</p></s>
+      </div>
+      <div class="discountPercent">
+        <p id="discountPercent">50%</p>
+      </div>
+    </div>
+
+    <div class="addToCartSec">
+      <div class="qty-Increment">
+        <!-- This is the minus button -->
+        <svg width="12" height="12" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class = "qtyBtns" id="qtyMinus">
+          <defs>
+          <path d="M11.357 3.332A.641.641 0 0 0 12 2.69V.643A.641.641 0 0 0 11.357 0H.643A.641.641 0 0 0 0 .643v2.046c0 .357.287.643.643.643h10.714Z" id="a"/>
+          </defs>
+          <use fill="#FF7E1B" fill-rule="nonzero" xlink:href="#a"/>
+          </svg>
+
+        <!-- This is the number of quantity -->
+        <p id="qtyNum">0</p>
+
+        <!-- This is the plus or increment icon -->
+        <svg width="12" height="12" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class ="qtyBtns" id="qtyPlus">
+          <defs>
+            <path d="M12 7.023V4.977a.641.641 0 0 0-.643-.643h-3.69V.643A.641.641 0 0 0 7.022 0H4.977a.641.641 0 0 0-.643.643v3.69H.643A.641.641 0 0 0 0 4.978v2.046c0 .356.287.643.643.643h3.69v3.691c0 .356.288.643.644.643h2.046a.641.641 0 0 0 .643-.643v-3.69h3.691A.641.641 0 0 0 12 7.022Z" id="b"/>
+          </defs>
+          <use fill="#FF7E1B" fill-rule="nonzero" xlink:href="#b"/>
+        </svg>
+
+      </div>
+
+      <div class="btn-addToCart">
+        <!-- This is the cart icon of the button-->
+        <svg width="22" height="20" xmlns="http://www.w3.org/2000/svg">
+          <path d="M20.925 3.641H3.863L3.61.816A.896.896 0 0 0 2.717 0H.897a.896.896 0 1 0 0 1.792h1l1.031 11.483c.073.828.52 1.726 1.291 2.336C2.83 17.385 4.099 20 6.359 20c1.875 0 3.197-1.87 2.554-3.642h4.905c-.642 1.77.677 3.642 2.555 3.642a2.72 2.72 0 0 0 2.717-2.717 2.72 2.72 0 0 0-2.717-2.717H6.365c-.681 0-1.274-.41-1.53-1.009l14.321-.842a.896.896 0 0 0 .817-.677l1.821-7.283a.897.897 0 0 0-.87-1.114ZM6.358 18.208a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm10.015 0a.926.926 0 0 1 0-1.85.926.926 0 0 1 0 1.85Zm2.021-7.243-13.8.81-.57-6.341h15.753l-1.383 5.53Z" fill="#fff" fill-rule="nonzero"/>
+        </svg>
+        <a href="#">Add to cart</a>
+
+      </div>
+    </div>
+
+
+  </div>
+</main>
+
+<!-- This is the lightbox section of the site -->
+
+ <div class="lightBox">
+  
+  <div class="lightboxContent">
+
+    <svg width="14" height="15" xmlns="http://www.w3.org/2000/svg" id="btnlightMenuClose">
+      <path d="m11.596.782 2.122 2.122L9.12 7.499l4.597 4.597-2.122 2.122L7 9.62l-4.595 4.597-2.122-2.122L4.878 7.5.282 2.904 2.404.782l4.595 4.596L11.596.782Z" fill="#69707D" fill-rule="evenodd" id="closeMenuPath"/>
+    </svg>
+
+    <img src="/assets/images/image-product-1.jpg" class="lightSlides"/>
+    <img src="/assets/images/image-product-2.jpg" class="lightSlides"/>
+    <img src="/assets/images/image-product-3.jpg" class ="lightSlides"/>
+    <img src="/assets/images/image-product-4.jpg" class="lightSlides"/>
+
+
+    
+    
+    <img src="/assets/images/icon-next.svg"  class ="lightSliders" id="btnNext"  onclick="nextLight(1)"/>
+    <img src="/assets/images/icon-previous.svg" class="lightSliders" id="btnPrevious" onclick="nextLight(-1)"/>
+  
+    
+    
+    <div class="lightThumbs">
+      <img src="/assets/images/image-product-1-thumbnail.jpg" class="smallImg-Light" onclick="currentLight(1)"/>
+      <img src="/assets/images/image-product-2-thumbnail.jpg" class="smallImg-Light" onclick="currentLight(2)"/>
+      <img src="/assets/images/image-product-3-thumbnail.jpg" class="smallImg-Light" onclick="currentLight(3)"/>
+      <img src="/assets/images/image-product-4-thumbnail.jpg" class="smallImg-Light" onclick="currentLight(4)"/>
+    </div>
+
+  </div>
+
+ </div> 
+
+ <!-- <p>$125.00<p>x</p><p>3</p><p><b>$375.00</b></p></p> -->
+
+
+
+<script src="/dist/index.js" type="text/javascript"></script>
+</body>
+</html>

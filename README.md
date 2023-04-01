@@ -34,7 +34,9 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![](/Screenshot/Screenshot%202023-04-02%20at%2000-42-24%20Frontend%20Mentor%20E-commerce%20product%20page.png)
+
+![](/Screenshot/Screenshot%202023-04-01%20at%2001-49-36%20Frontend%20Mentor%20E-commerce%20product%20page.png)
 
 
 

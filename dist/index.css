@@ -367,6 +367,7 @@ ul a:hover{
     display: none;
 }
 
+
 /* Here is the media query for the mobile view of the site */
 /* 428px */
 @media screen and (max-width: 600px) {
@@ -418,6 +419,7 @@ justify-content: space-evenly;
     border-radius: 0;
 }
 
+
 .right-side{
     width: 100%;
     display: flex;
@@ -430,12 +432,10 @@ justify-content: space-evenly;
     width: 23%;
     margin: 1rem;
 }
-.price-discount{
+.priceDiscount{
     display: flex;
 }
-#currentPrice{
-    background: hsl(26, 100%, 55%);
-}
+
 .addToCartSec{
     display: block;
 }

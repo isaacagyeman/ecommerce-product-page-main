@@ -34,7 +34,7 @@ const Decrease = function decrement(){
         qtyCount -= 1;
         quantity.innerHTML = qtyCount;
     }else{
-        return
+        qtyCount = 0;
     }
 }
 

@@ -21,6 +21,24 @@ var thumbnials = document.getElementsByClassName('small-Imgs');
 var lightThumbs = document.getElementsByClassName('smallImg-Light');
 var lightBox = document.querySelector('.lightBox');
 
+var quantity = document.querySelector('#qtyNum');
+
+var qtyCount = 0;
+
+const Increase = function increment(){
+    qtyCount +=  1;
+    quantity.innerHTML = qtyCount;
+}
+const Decrease = function decrement(){
+    if(qtyCount >= 0){
+        qtyCount -= 1;
+        quantity.innerHTML = qtyCount;
+    }else{
+        return
+    }
+}
+
+
 
 
 let initialIndex = 1;
@@ -96,4 +114,7 @@ btnMenuClose.addEventListener('click',()=>{
 lightBoxClose.addEventListener('click',()=>{
     lightBox.style.display = 'none';
 });
+
+btnIncrease.addEventListener('click',Increase);
+btnDecrease.addEventListener('click',Decrease);
 

@@ -47,9 +47,11 @@ nav a{
 }
 #avatarImg{
     width: 40%;
+    border-radius: 50%;
 }
 #avatarImg:hover{
     cursor: pointer;
+    border: solid hsl(26, 100%, 55%) 2px;
 }
 .sep-nav{
 margin-top: -1rem;
@@ -95,7 +97,6 @@ display: none;
 .left-side{
 width: 40%;
 max-width: 100%;
-/* border: solid; */
 }
 .thumbnails{
     display: flex;
@@ -216,7 +217,9 @@ ul a:hover{
     background:hsl(223, 64%, 98%) ;
     opacity: 0.5;
 }
-
+/*
+    **********CART STYLING SECTION**********
+ */
 .cartMenu{
     z-index: 1;
     width: 20%;
@@ -228,7 +231,7 @@ ul a:hover{
     top: 8.5%;
     background-color: white;
     position: absolute;
-    display: none;
+    display: none; /*This is where I have hidden the cart to be worked later*/
 }
 #cartContentImg{
     width: 20%;
@@ -275,7 +278,9 @@ ul a:hover{
     display: none;     /*This is the menuInner content of the cart menu*/
 }
 
-/* This is the lightbox side of the program */
+/*
+ ***********THIS IS THE LIGHT BOX STYLING SECTION *********** 
+ */
 
 .lightBox{
     width: 100%;
@@ -368,8 +373,10 @@ ul a:hover{
 }
 
 
-/* Here is the media query for the mobile view of the site */
-/* 428px */
+/* 
+***************HERE IS THE MOBILE VIEW OF THE SITE USING MEDIA QUERY*********
+ */
+
 @media screen and (max-width: 600px) {
     
  nav li{

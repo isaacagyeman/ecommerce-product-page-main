@@ -352,16 +352,17 @@ ul a:hover{
 
 
 #totalIndicator{
-    padding: .1rem;
+    padding: 0rem .5em;
     background-color: hsl(26, 100%, 55%);
     color: white;
     border-radius: 50%;
     font-size: 9pt;
     margin-top: .5rem;
+    margin-left: .7rem;
     z-index: 1;
     position: absolute;
     right: 1;
-    display: none;
+    display: block;
 }
 #menu{
     margin-right: 1rem;

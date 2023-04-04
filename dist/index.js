@@ -21,11 +21,13 @@ var thumbnials = document.getElementsByClassName('small-Imgs');
 var lightThumbs = document.getElementsByClassName('smallImg-Light');
 var lightBox = document.querySelector('.lightBox');
 
-var addToCart = document.querySelector('.btn-addToCart')
+var addToCart = document.querySelector('.btn-addToCart');
 var quantity = document.querySelector('#qtyNum');
+var cartQuantity = document.querySelector('#totalIndicator');
 
 var cart_items = [];
 var qtyCount = 0;
+
 
 totalItemPrice = qtyCount * 125.00;
 
@@ -35,11 +37,11 @@ const addItem = function(){
     cart.price = 125.00
     cart.qty = qtyCount
     cart.totalPrice = qtyCount * 125.00
-        
     cart_items.push(cart)
+    cartQuantity.innerHTML = qtyCount;
     console.log(cart_items)
-alert(cart.totalPrice + " is the total price of the selected quantity of shoes")
-
+    // alert(cart.totalPrice + " is the total price of the selected quantity of shoes")
+    
 }
 
 const Increase = function increment(){
@@ -55,6 +57,7 @@ const Decrease = function decrement(){
         qtyCount = 0;
     }
 }
+
 
 
 let initialIndex = 1;

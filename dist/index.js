@@ -32,13 +32,20 @@ var qtyCount = 0;
 totalItemPrice = qtyCount * 125.00;
 
 const addItem = function(){
+
     const cart = new Object();
     cart.itemName = "Fall Limited Edition Sneakers"
     cart.price = 125.00
     cart.qty = qtyCount
     cart.totalPrice = qtyCount * 125.00
-    cart_items.push(cart)
-    cartQuantity.innerHTML = qtyCount;
+    if(qtyCount != 0){
+        cart_items.push(cart)
+        cartQuantity.style.display = 'block';
+        cartQuantity.innerHTML = qtyCount;
+    }else if(qtyCount == 0){
+        cartQuantity.style.display = 'none';
+        cart_items = [];
+    }
     console.log(cart_items)
     // alert(cart.totalPrice + " is the total price of the selected quantity of shoes")
     

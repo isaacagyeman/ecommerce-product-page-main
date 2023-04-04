@@ -362,7 +362,7 @@ ul a:hover{
     z-index: 1;
     position: absolute;
     right: 1;
-    display: block;
+    display: none;
 }
 #menu{
     margin-right: 1rem;

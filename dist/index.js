@@ -21,14 +21,32 @@ var thumbnials = document.getElementsByClassName('small-Imgs');
 var lightThumbs = document.getElementsByClassName('smallImg-Light');
 var lightBox = document.querySelector('.lightBox');
 
+var addToCart = document.querySelector('.btn-addToCart')
 var quantity = document.querySelector('#qtyNum');
 
+var cart_items = [];
 var qtyCount = 0;
+
+totalItemPrice = qtyCount * 125.00;
+
+const addItem = function(){
+    const cart = new Object();
+    cart.itemName = "Fall Limited Edition Sneakers"
+    cart.price = 125.00
+    cart.qty = qtyCount
+    cart.totalPrice = qtyCount * 125.00
+        
+    cart_items.push(cart)
+    console.log(cart_items)
+alert(cart.totalPrice + " is the total price of the selected quantity of shoes")
+
+}
 
 const Increase = function increment(){
     qtyCount +=  1;
     quantity.innerHTML = qtyCount;
 }
+
 const Decrease = function decrement(){
     if(qtyCount >= 0){
         qtyCount -= 1;
@@ -37,8 +55,6 @@ const Decrease = function decrement(){
         qtyCount = 0;
     }
 }
-
-
 
 
 let initialIndex = 1;
@@ -80,7 +96,7 @@ function showSlides(n){
     thumbnials[initialIndex-1].style.borderColor = "hsl(26, 100%, 55%)";
     
     ImgSlides[initialIndex-1].style.display = 'block';
-
+    
     ImgSlides[initialIndex-1].addEventListener('click',()=>{
         lightBox.style.display = 'block';
     });
@@ -118,3 +134,4 @@ lightBoxClose.addEventListener('click',()=>{
 btnIncrease.addEventListener('click',Increase);
 btnDecrease.addEventListener('click',Decrease);
 
+addToCart.addEventListener('click',addItem)

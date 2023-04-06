@@ -199,7 +199,7 @@ ul a:hover{
     background-color:hsl(26, 100%, 55%);
     border-radius: 10px;
     margin-left: .7rem;
-    transition: background 0.5s;
+    transition: background 0.3s;
 }
 .btn-addToCart:hover{
     cursor: pointer;
